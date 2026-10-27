@@ -2,54 +2,108 @@
 
 **I build creative tools, from the interface down to the engine.**
 
-Native Mac apps, video understanding, programmable editing, and tools that give creators control. Most of this work grew out of making my own underwater films.
+Most of them start as a problem in my own life. I film dives in California kelp, so I built a native Mac editor that finds the moments, a color lab that learns how I like water to look, and agents that can actually work inside them. I like agent interfaces, and I like pushing what AI can do in a real tool.
 
-## Reef · find the moment, shape the edit
+<p align="center"><a href="https://github.com/henryhcooperr/grade-lab"><img src="assets/hero.gif" width="880" alt="Bringing the color back. Left of the line is what the GoPro recorded in log; right of the line is my grade from Grade Lab. Same frames, same Garibaldi."></a></p>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/reef-workflow-poster.jpg">
-  <img alt="Reef concept walkthrough: inspect Catalina moments, refine a reel in chat, open the editor, and review underwater color." src="docs/assets/reef-workflow.gif" width="100%">
-</picture>
+**[See it in Grade Lab](https://github.com/henryhcooperr/grade-lab)** · [LinkedIn](https://www.linkedin.com/in/henryhcooper/) · San Diego · open to full-time SWE roles · remote or SF
 
-<sub>Staged concept walkthrough using Reef’s native interface and my Catalina footage. Prepared chat and proposed interactions; active development.</sub>
+## What I'm building
 
-A native media workspace and Python engine for finding moments in footage, assembling editable reels, and shaping cuts, captions, audio, and playback through the interface or MCP tools.
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/henryhcooperr/reef"><img src="assets/reef.gif" width="380" alt="Reef"></a>
 
-**Swift / SwiftUI · Python · SQLite · FFmpeg · MCP**<br>
-[Watch the full 90-second demo →](https://henryhcooperr.github.io/henryhcooperr/#reef) · [Explore the engineering →](projects/reef.md)
+**Reef** — the native Mac editor I cut my dives in. It finds the moments in hours of footage, and an agent edits the same timeline I do.<br>
+<sub>Swift · SwiftUI · Python engine · SQLite · MCP</sub>
 
-## Grade Lab · color from beneath the surface
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/henryhcooperr/grade-lab"><img src="assets/grade-lab.gif" width="380" alt="Reef Grade Lab"></a>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/grade-lab-review-poster.jpg">
-  <img alt="The same Catalina frames before and after grading: original GP-Log2 camera footage at left, Henry’s selected Grade Lab result at right." src="docs/assets/grade-lab-review.gif" width="100%">
-</picture>
+**Reef Grade Lab** — an agent grades my dive footage inside DaVinci Resolve through an MCP server I built, on real nodes I can keep editing, and starts each new shot from a grade I loved.<br>
+<sub>Python · NumPy · DaVinci Resolve · DCTL · MCP</sub>
 
-<sub>Grade Lab’s browser review layout, restaged with my Catalina footage. Original GP-Log2 camera image at left; selected grade at right. Matched frames and synchronized playback; this demonstration does not run a new grade.</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/henryhcooperr/reef-social-lab"><img src="assets/social-lab.gif" width="380" alt="Social Lab"></a>
 
-A specialized underwater grading toolchain: shot analysis, editable color treatments, motion review, and tools for revising supported grades in DaVinci Resolve.
+**Social Lab** — lets an agent pull references from what it already knows about the clip, then checks whether each post really outperformed for its creator.<br>
+<sub>Python · robust statistics · bootstrap · MCP</sub>
 
-**Python · NumPy · DaVinci Resolve / Fusion · DCTL · MCP**<br>
-[Watch the before / after →](https://henryhcooperr.github.io/henryhcooperr/#grade-lab) · [Inside Grade Lab →](projects/grade-lab.md)
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/henryhcooperr/coopr"><img src="assets/coopr.gif" width="380" alt="COOPR"></a>
 
-## COOPR / Content Brain · a workspace for the next idea
+**COOPR** — a creator workspace where the conversation, the clips and the document are the same thing. Pick a direction, and it lands in an editable draft.<br>
+<sub>React · TypeScript · Python · PostgreSQL</sub>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/coopr-caption-capture-document.jpg">
-  <img alt="A staged COOPR interface study: opening a dive photo draft, choosing a caption, refining it, and returning to the updated document." src="docs/assets/coopr-caption-demo.gif" width="100%">
-</picture>
+</td>
+</tr>
+</table>
 
-<sub>COOPR interface study · staged example. A rebuilt preview using COOPR’s design language and sample content.</sub>
+## Inside the engines
 
-An experimental creator workspace combining video review, clip comparison, documents, writing-style feedback, and tools for turning ideas into hooks, scripts, and filming plans.
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/color.gif" width="250" alt="Camera signal → underwater color"></a>
 
-**React / TypeScript · Python · PostgreSQL · MCP**<br>
-[Watch the interface study →](https://henryhcooperr.github.io/henryhcooperr/#coopr) · [Project notes →](projects/content-brain.md) · [Interface prototype source](https://github.com/henryhcooperr/coopr-prototype)
+**Camera signal → underwater color**<br>
+<sub>Log decode, linear light, luminance-preserving color, LUT.</sub>
+
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/learning.gif" width="250" alt="Learning my eye"></a>
+
+**Learning my eye**<br>
+<sub>My feedback changes which past grade a new shot starts from.</sub>
+
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/moments.gif" width="250" alt="Finding the moment"></a>
+
+**Finding the moment**<br>
+<sub>Subject, sharpness and motion signals become IN, PEAK and OUT.</sub>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/restoring.gif" width="250" alt="Restoring color through water"></a>
+
+**Restoring color through water**<br>
+<sub>Depth-aware inversion, and the pink surface it taught me to fix.</sub>
+
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/timeline.gif" width="250" alt="Sharing a timeline with an agent"></a>
+
+**Sharing a timeline with an agent**<br>
+<sub>Undo the agent's trim, keep my speed change, catch conflicts.</sub>
+
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/outperformed.png" width="250" alt="Which post actually outperformed?"></a>
+
+**Which post actually outperformed?**<br>
+<sub>Leave-one-out medians, robust scores, bootstrap uncertainty.</sub>
+
+</td>
+</tr>
+</table>
+
+## Why the repos are private
+
+<img src="assets/henry.jpg" width="92" align="right" alt="Henry Cooper in an orca hoodie on a porch">
+
+I ship to these every day, and they aren't ready to open yet. The contribution graph below is real; almost all of it lands in private repos.
+
+Each product has a public **showcase repo** with demos, architecture and how it works. Small algorithms ship as runnable code in [reef-algorithm-studies](https://github.com/henryhcooperr/reef-algorithm-studies). Also public: [the COOPR interface prototype](https://github.com/henryhcooperr/coopr-prototype) and [my PyTorch model experiments](https://github.com/henryhcooperr/FaceRecognition-MultiArchitecture-Pipeline).
 
 ---
 
-**CS (Machine Learning) + Applied Mathematics** · University of San Diego · Graduating in December.
-
-Looking for **full-time software engineering roles**. Based in San Diego; remote preferred, open to San Francisco. [Connect on LinkedIn →](https://www.linkedin.com/in/henryhcooper/)
-
-Reef and Grade Lab are in active development; COOPR is experimental. The full product repositories remain private. These pages share selected workflows and engineering notes. Also public: [my PyTorch model experiments](https://github.com/henryhcooperr/FaceRecognition-MultiArchitecture-Pipeline).
+**CS (Machine Learning) + Applied Mathematics** · University of San Diego · graduating in December
